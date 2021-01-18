@@ -26,7 +26,7 @@ Blob::Blob(BlobDesc desc) {
 Blob::Blob(BlobDesc desc, bool alloc_memory) {
     desc_ = desc;
     alloc_memory_ = alloc_memory;
-    if(alloc_memory) {
+//    if(alloc_memory) {
         auto device = GetDevice(desc.device_type);
         if(device != NULL) {
             BlobMemorySizeInfo size_info = device->Calculate(desc);
